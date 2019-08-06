@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_864940_08n96dhqskyh.css" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        :root{
+            --button-height:32px;
+            --font-size:14px;
+            --button-bg:white;
+            --button-active-bg:#eee;
+            --border-radius:4px;
+            --color:#333;
+            --border-color:#999;
+            --border-color-hover:#666;       
+        }
+        #app{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <eye-icon name='setting'></eye-icon>
+        <eye-button>按钮1</eye-button>
+        <eye-button icon='setting'>按钮2</eye-button>
+        <eye-button icon='setting' icon-position='right'>按钮3</eye-button>
+        <eye-button :loading=true>按钮4</eye-button>
+        <eye-button :loading="loading" @click="loading = !loading">点我</eye-button>
+        <eye-button-group >
+            <eye-button>上页</eye-button>  
+            <eye-button>1</eye-button>
+            <eye-button>2</eye-button>
+            <eye-button>4</eye-button>
+            <eye-button>5</eye-button>
+            <eye-button>下页</eye-button>
+        </eye-button-group>
+    </div>
+
+</body>
+<script src="./src/app.js" ></script>
+</html>
