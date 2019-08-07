@@ -18,7 +18,7 @@ describe('Icon', () => {
         }).$mount();
         const iconElement = vm.$el;
         // 字符串中期望出现icon-setting
-        expect(iconElement.getAttribute('class')).to.include('icon-setting');
+        expect(iconElement.getAttribute('class')).to.include('icon-setting2');
         vm.$destroy();
     })
 })
