@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-minify && karma start --single-run",
     "start": "./node_modules/.bin/parcel index.html --no-cache"
   },
   "keywords": [],
@@ -31,7 +32,6 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "chai": "^4.2.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   }

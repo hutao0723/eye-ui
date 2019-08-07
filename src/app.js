@@ -3,11 +3,13 @@ import Icon from "./icon.vue";
 import Button from "./button.vue";
 import ButtonGroup from "./button-group.vue";
 
-Vue.component("eye-button",Button);
-Vue.component("eye-icon",Icon);
-Vue.component("eye-button-group",ButtonGroup);
 new Vue({
     el:'#app',
+    components:{
+        "eye-button":Button,  
+        "eye-icon":Icon, 
+        "eye-button-group":ButtonGroup
+    },
     data(){
         return{
             loading:true
@@ -30,6 +32,7 @@ const expect = chai.expect;
     }).$mount();
     const iconElement = vm.$el.querySelector('i');
     // 字符串中期望出现icon-setting
+    console.log(typeof iconElement);
     expect(iconElement.getAttribute('class')).to.include('icon-setting');
     vm.$el.remove();
     vm.$destroy();
